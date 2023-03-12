@@ -108,6 +108,36 @@ a:hover {
     gap: 4em;
 }
 
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#wrapper--user {
+    display: flex;
+    align-items: center;
+}
+
+#user-name {
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+    line-height: 1em;
+    width: 125px;
+    margin-right: 5px;
+}
+
+.iconButton {
+    font-size: 2rem;
+}
+
+#icons {
+    position: relative;
+    bottom: -3px;
+}
+
 #bio, a {
     font-weight: 300;
 }
@@ -116,18 +146,9 @@ a:hover {
     margin-bottom: 5px;
 }
 
-#user-name {
-    font-size: 48px;
-    line-height: 1em;
-}
-
-#profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
+/*
+socials--list is unused but I decided to keep it incase I ever reuse it.
+*/
 #socials--list {
     display: flex;
     column-gap: 1em;

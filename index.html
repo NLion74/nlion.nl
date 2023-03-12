@@ -7,31 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
     <script defer data-domain="nlion.nl" src="https://plsb.nlion.de/js/script.js"></script>
-    <style>
-        .email,.xmpp {
-            content: "_not_a_real_address_@xmpp.jp";
-            display: none;
-        }
-    </style>
-    <meta name="description" content="">
-    <link rel="icon" href="assets/images/favicon.ico" >
-    <link rel="stylesheet" href="assets/css/style.css?v=1.6">
+    <style>.email,.xmpp{content: "_not_a_real_address_@xmpp.jp";display: none;}</style>
+    <script src="https://kit.fontawesome.com/c366121ead.js" crossorigin="anonymous"></script>    <meta name="description" content="">
+    <link rel="icon" href="./assets/images/favicon.ico" >
+    <link rel="stylesheet" href="./assets/css/style.css?v=1.6">
 </head>
 <body>
     <div id="container--main">
     <section id="wrapper--hero" class="section--page">
     <img id="profile-pic" src="./assets/images/nlion.png" draggable="false">
     <div>
-        <h1 id="user-name">nlion<i class="fab fa-github""></i></h1>
+        <div id="wrapper--user">
+            <h1 id="user-name">nlion</h1>
+            <div id="icons">
+                <a class="iconButton" href="https://github.com/NLion74/" target="_blank">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
         <p id="bio">Feel free to use PGP when sending me messages over any platform listed below. You can copy my PGP Key from <a href="https://nlion.nl/pgp.txt">nlion.nl/pgp.txt</a> or import it using the following command: </p>
         <code id="command">curl -sL https://nlion.nl/pgp.txt | gpg --import</code>
-    </div>
-    </section>
-    <section class="section--page">
-        <h2>Socials</h2>
-        <div id="socials--list">
-            <a href="https://nlion.nl/" target="_blank">Website</a>
-            <a href="https://Github.com/NLion74" target="_blank">Github</a>
     </div>
     </section>
     <section class="section--page">
