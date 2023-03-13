@@ -138,12 +138,32 @@ a:hover {
 }
 
 .iconButton {
-    font-size: 2rem;
+    color: white;
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.iconButton a:hover {
+    scale: 1.1;
 }
 
 #icons {
     position: relative;
     bottom: -3px;
+}
+
+#icons a {
+    color: white;
+    display: inline-block;
+    min-width: 31px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#icons a:hover {
+    scale: 1.1;
 }
 
 #bio, a {
@@ -154,9 +174,30 @@ a:hover {
     margin-bottom: 5px;
 }
 
-/*
-socials--list is unused but I decided to keep it incase I ever reuse it.
-*/
+.section--text, a {
+    font-weight: 300;
+}
+
+.section--text {
+    max-width: 97%;
+    margin-bottom: 5px;
+}
+
+.age {
+    color: var(--mainTextColor)
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+/* 
+Keeping it incase I ever reuse it.
+
 #socials--list {
     display: flex;
     column-gap: 1em;
@@ -175,6 +216,7 @@ socials--list is unused but I decided to keep it incase I ever reuse it.
     color: var(--mainLinkColor);
     font-size: 0.9em;
 }
+*/
 
 #contact-table {
     border-collapse: collapse;
@@ -201,9 +243,23 @@ socials--list is unused but I decided to keep it incase I ever reuse it.
 }
 
 @media only screen and (max-width: 768px) {
+    .section--page{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    #container--main {
+        max-width: 500px;
+    }
+
     #wrapper--hero {
         display: flex;
         align-items: center;
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    #wrapper--user-bio {
         gap: 1em;
         flex-direction: column;
     }
@@ -214,6 +270,6 @@ socials--list is unused but I decided to keep it incase I ever reuse it.
     }
 
     #wrapper--user {
-        margin: auto;
+        margin-top: 40px auto;
     }
 }

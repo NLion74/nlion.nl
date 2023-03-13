@@ -4,7 +4,7 @@
     <title>nlion</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1, user-scalable=0">
     <meta property="og:type" content="website">
     <script defer data-domain="nlion.nl" src="https://plsb.nlion.de/js/script.js"></script>
     <style>.email,.xmpp{content: "_not_a_real_address_@xmpp.jp";display: none;}</style>
@@ -25,13 +25,14 @@
                 </a>
             </div>
         </div>
-        <p id="bio">Feel free to use PGP when sending me messages over any platform listed below. You can copy my PGP Key from <a href="https://nlion.nl/pgp.txt">nlion.nl/pgp.txt</a> or import it using the following command: </p>
-        <code id="bio">curl -sL https://nlion.nl/pgp.txt | gpg --import</code>
+        <p id="bio">Hey, I'm a <span class="age">15<noscript>15</noscript></span> year old developer and proud selfhoster from germany.</p>
     </div>
     </section>
     <section class="section--page">
         <h2>Contact Methods</h2>
-        <div id="contact-table">
+        <p class="section--text no-margin-bottom">Feel free to use PGP when sending me messages over any platform listed below. You can copy my PGP Key from <a href="https://nlion.nl/pgp.txt">nlion.nl/pgp.txt</a> or import it using the following command: </p>
+        <code class="section--text">curl -sL https://nlion.nl/pgp.txt | gpg --import</code>
+        <div class="margin-top" id="contact-table">
             <table>
                 <tr>
                     <td style="border: 1px solid">
@@ -63,15 +64,16 @@
     </section>
     <section class="section--page">
         <h2>Privacy</h2>
-        <p>
+        <p class="section--text">
             This website uses <a href="https://plausible.io/" rel="noreferrer" target="_blank">Plausible Analytics</a>
             which collects neither personally identifiable information (PII), nor uses uses cookies. You can read more about how Plausible collects data <a href="https://plausible.io/privacy-focused-web-analytics" rel="noreferrer" target="_blank">here</a>
             .
         </p>
-        <p>
+        <p class="section--text">
             Besides Plausible Analytics this website also uses cloudflare for proxying, you can read more about cloadflare's privacy policy <a href="https://www.cloudflare.com/privacypolicy/" rel="noreferrer" target="_blank">here</a>
             .
         </p>
     </section>
     <script src="./assets/js/email-obfuscation.js?v=1.7"></script>
+    <script src="./assets/js/age-update.js"></script>
 </html>
