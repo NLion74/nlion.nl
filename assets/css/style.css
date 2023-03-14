@@ -195,29 +195,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-/* 
-Keeping it incase I ever reuse it.
-
-#socials--list {
-    display: flex;
-    column-gap: 1em;
-    flex-wrap: wrap;
-}
-
-#socials--list a {
-    font-weight: 300;
-    color: var(--secondaryTextColor);
-    font-size: 0.9em;
-    transition: 0.3s;
-}
-
-#socials--list a:hover {
-    font-weight: 100;
-    color: var(--mainLinkColor);
-    font-size: 0.9em;
-}
-*/
-
 #contact-table {
     border-collapse: collapse;
     margin-top: 25px 0;
