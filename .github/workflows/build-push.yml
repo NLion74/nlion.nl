@@ -72,7 +72,5 @@ jobs:
               with:
                   push: true
                   platforms: ${{ matrix.platforms }}
-                  cache-from: type=gha
-                  cache-to: type=gha,mode=max
                   tags: ${{ steps.metadata.outputs.tags }}
                   labels: ${{ steps.metadata.outputs.labels }}
