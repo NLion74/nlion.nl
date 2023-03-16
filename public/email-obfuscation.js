@@ -36,12 +36,19 @@ function turn_around(str) {
     return new_str;
 }
 
+function get_mailto(unsplitted) {
+    console.log(unsplitted);
+    let mailto = unsplitted.split('mailto:');
+
+    let encoded = mailto[mailto.length - 1].split('/');
+    return encoded[encoded.length - 1]
+}
+
 function decryptEmail_mailto() {
     const elements = document.querySelectorAll('.mail_obfuscate_mailto');
 
     for (let element of elements) {
-        let mailto = element.href.split('mailto:');
-        let address = decrypt(mailto[mailto.length - 1]);
+        let address = decrypt(get_mailto(element.href));
 
         let address_around = turn_around(address);
 

@@ -1,0 +1,52 @@
+#wrapper--user {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 48px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 0;
+}
+
+#user-name {
+    align-items: center;
+    font-size: 48px;
+    line-height: 1em;
+    width: 125px;
+    margin-right: 5px;
+}
+
+.iconButton {
+    color: white;
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.iconButton a:hover {
+    scale: 1.1;
+}
+
+#icons {
+    position: relative;
+    bottom: -3px;
+}
+
+#icons a {
+    color: white;
+    display: inline-block;
+    min-width: 31px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#icons a:hover {
+    scale: 1.1;
+}
+
+@media only screen and (max-width: 768px) {
+    #wrapper--user {
+        margin-top: 40px auto;
+    }
+}

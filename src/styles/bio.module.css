@@ -1,0 +1,8 @@
+#bio {
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.age {
+    color: var(--mainTextColor)
+}
