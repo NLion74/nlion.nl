@@ -1,30 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 
 :root {
-    --mainTextColor-dark:#fff;
-    --secondaryTextColor-dark:#adb0b1;
-    --mainLinkColor-dark:rgb(30, 190, 214);
-    --mainLinkColorHover-dark:rgb(20, 150, 175);
-    --mainBorderColor-dark:#2b3031;
-    --mainBgColor-dark:#131415;
-    
-    --mainTextColor:var(--mainTextColor-dark);
-    --secondaryTextColor:var(--secondaryTextColor-dark);
-    --mainLinkColor:var(--mainLinkColor-dark);
-    --mainLinkColorHover:var(--mainLinkColorHover-dark);
-    --mainBorderColor:var(--mainBorderColor-dark);
-    --mainBgColor:var(--mainBgColor-dark);
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #adb0b1;
+    --mainLinkColor-dark: rgb(30, 190, 214);
+    --mainLinkColorHover-dark: rgb(20, 150, 175);
+    --mainBorderColor-dark: #2b3031;
+    --mainBgColor-dark: #131415;
 
+    --mainTextColor: var(--mainTextColor-dark);
+    --secondaryTextColor: var(--secondaryTextColor-dark);
+    --mainLinkColor: var(--mainLinkColor-dark);
+    --mainLinkColorHover: var(--mainLinkColorHover-dark);
+    --mainBorderColor: var(--mainBorderColor-dark);
+    --mainBgColor: var(--mainBgColor-dark);
 }
 
-#root {
+#main--container {
     max-width: 700px;
     margin: 0 auto;
     padding: 1em;
 }
 
 * {
-    font-family: 'Readex Pro';
+    font-family: "Readex Pro";
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
@@ -33,13 +32,14 @@
 body {
     background-color: var(--mainBgColor);
     overflow-x: hidden;
-	word-break: break-word;
-	overflow-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
     margin: 0 auto;
 }
 
-
-p, span, li {
+p,
+span,
+li {
     color: var(--secondaryTextColor);
     font-size: 1em;
 }
@@ -55,29 +55,30 @@ li {
 }
 
 code {
-	border: 1px solid var(--mainBorderColor);
+    border: 1px solid var(--mainBorderColor);
     border-radius: 4px;
     font-size: 0.9rem;
     line-height: 1.5;
-	height: 2rem;
-	padding: 3px 6px;
-	overflow-wrap: break-word;
-	background-color: var(--mainBgColor);
-	border-color: var(--mainBorderColor);
-	color: var(--mainTextColor);
+    height: 2rem;
+    padding: 3px 6px;
+    overflow-wrap: break-word;
+    background-color: var(--mainBgColor);
+    border-color: var(--mainBorderColor);
+    color: var(--mainTextColor);
     font-style: monospace;
 }
 
-table{
-	border-radius: 10px;
-	border-collapse:collapse;
-	table-layout: fixed;
-	width:90%;
-	margin-bottom: 8px;
+table {
+    border-radius: 10px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 90%;
+    margin-bottom: 8px;
 }
 
-th,td{
-	padding:8px;
+th,
+td {
+    padding: 8px;
 }
 
 a:-webkit-any-link {
@@ -92,9 +93,9 @@ a:hover {
 }
 
 ::selection {
-	/* Set background color for selected text */
-	background: #0070F3;
-	color: #fff;
+    /* Set background color for selected text */
+    background: #0070f3;
+    color: #fff;
 }
 
 .section--page {
@@ -102,7 +103,8 @@ a:hover {
     padding-bottom: 1em;
 }
 
-.section--text, a {
+.section--text,
+a {
     font-weight: 300;
 }
 
@@ -120,12 +122,12 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .section--page{
+    .section--page {
         padding-top: 1em;
         padding-bottom: 1em;
     }
-    
-    #root {
+
+    #main--container {
         max-width: 500px;
     }
 }
