@@ -1,0 +1,26 @@
+.tableHeader {
+    border: 1px solid
+}
+
+#contact-table {
+    border-collapse: collapse;
+    margin-top: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+
+#contact-table thead tr {
+    color: var(--secondaryTextColor);
+    text-align: left;
+}
+
+#contact-table th,
+#contact-table td {
+    color: var(--secondaryTextColor);
+    padding: 12px 15px;
+}
+
+#contact-table tbody tr {
+    border-bottom: 1px solid var(--mainBgColor);
+}

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #adb0b1;
+    --mainLinkColor-dark: rgb(30, 190, 214);
+    --mainLinkColorHover-dark: rgb(20, 150, 175);
+    --mainBorderColor-dark: #2b3031;
+    --mainBgColor-dark: #131415;
+
+    --mainTextColor: var(--mainTextColor-dark);
+    --secondaryTextColor: var(--secondaryTextColor-dark);
+    --mainLinkColor: var(--mainLinkColor-dark);
+    --mainLinkColorHover: var(--mainLinkColorHover-dark);
+    --mainBorderColor: var(--mainBorderColor-dark);
+    --mainBgColor: var(--mainBgColor-dark);
+}
+
+#main--container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+* {
+    font-family: "Readex Pro";
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor);
+    overflow-x: hidden;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+}
+
+p,
+span,
+li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+code {
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    height: 2rem;
+    padding: 3px 6px;
+    overflow-wrap: break-word;
+    background-color: var(--mainBgColor);
+    border-color: var(--mainBorderColor);
+    color: var(--mainTextColor);
+    font-style: monospace;
+}
+
+table {
+    border-radius: 10px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 90%;
+    margin-bottom: 8px;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+a:-webkit-any-link {
+    transition: 0.2s;
+    color: var(--mainLinkColor);
+    cursor: pointer;
+}
+
+a:hover {
+    font-weight: 100;
+    color: var(--mainLinkColorHover);
+}
+
+::selection {
+    /* Set background color for selected text */
+    background: #0070f3;
+    color: #fff;
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.section--text,
+a {
+    font-weight: 300;
+}
+
+.section--text {
+    max-width: 97%;
+    margin-bottom: 5px;
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .section--page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #main--container {
+        max-width: 500px;
+    }
+}
