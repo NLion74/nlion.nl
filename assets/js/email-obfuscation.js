@@ -5,12 +5,12 @@ function decrypt(encoded) {
 }
 
 function encodeString(str) {
-    let new_str = []
+    let new_str = [];
     for (let i in str) {
         new_str.push(`&#${str.charCodeAt(i)}`);
     }
-    new_str = new_str.join('');
- 
+    new_str = new_str.join("");
+
     return new_str;
 }
 
@@ -21,34 +21,26 @@ function randomize_encoding(str) {
 
         if (chance < 0.5) {
             new_str.push(encodeString(str[i]));
-        }
-        else {
+        } else {
             new_str.push(str[i]);
         }
     }
-    new_str = new_str.join('');
-    
+    new_str = new_str.join("");
+
     return new_str;
-    }
+}
 
 function turn_around(str) {
     let new_str = str.split("").reverse().join("");
     return new_str;
 }
 
-function get_mailto(unsplitted) {
-    console.log(unsplitted);
-    let mailto = unsplitted.split('mailto:');
-
-    let encoded = mailto[mailto.length - 1].split('/');
-    return encoded[encoded.length - 1]
-}
-
 function decryptEmail_mailto() {
-    const elements = document.querySelectorAll('.mail_obfuscate_mailto');
+    const elements = document.querySelectorAll(".mail_obfuscate_mailto");
 
     for (let element of elements) {
-        let address = decrypt(get_mailto(element.href));
+        let mailto = element.href.split("mailto:");
+        let address = decrypt(mailto[mailto.length - 1]);
 
         let address_around = turn_around(address);
 
@@ -57,16 +49,16 @@ function decryptEmail_mailto() {
 }
 
 function decryptEmail() {
-    const elements = document.querySelectorAll('.mail_obfuscate');
+    const elements = document.querySelectorAll(".mail_obfuscate");
 
     for (let element of elements) {
         let address = decrypt(element.innerHTML);
 
         let address_around = turn_around(address);
-        
+
         element.innerHTML = address_around;
     }
 }
 
-decryptEmail()
-decryptEmail_mailto()
+decryptEmail();
+decryptEmail_mailto();

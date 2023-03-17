@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --mainLinkColor-dark:rgb(30, 190, 214);
+    --mainLinkColorHover-dark:rgb(20, 150, 175);
+    --mainBorderColor-dark:#2b3031;
+    --mainBgColor-dark:#131415;
+    
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainLinkColorHover:var(--mainLinkColorHover-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);
+
+}
+
+
+* {
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor);
+    overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
+    margin: 0 auto;
+}
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+code {
+	border: 1px solid var(--mainBorderColor);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+	height: 2rem;
+	padding: 3px 6px;
+	overflow-wrap: break-word;
+	background-color: var(--mainBgColor);
+	border-color: var(--mainBorderColor);
+	color: var(--mainTextColor);
+    font-style: monospace;
+}
+
+table{
+	border-radius: 10px;
+	border-collapse:collapse;
+	table-layout: fixed;
+	width:90%;
+	margin-bottom: 8px;
+}
+
+th,td{
+	padding:8px;
+}
+
+a:-webkit-any-link {
+    transition: 0.2s;
+    color: var(--mainLinkColor);
+    cursor: pointer;
+}
+
+a:hover {
+    font-weight: 100;
+    color: var(--mainLinkColorHover);
+}
+
+::selection {
+	/* Set background color for selected text */
+	background: #0070F3;
+	color: #fff;
+}
+
+#container--main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#wrapper--user-bio {
+    max-width: 440px;
+}
+
+#wrapper--user {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 48px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 0
+}
+
+#user-name {
+    align-items: center;
+    font-size: 48px;
+    line-height: 1em;
+    width: 125px;
+    margin-right: 5px;
+}
+
+.iconButton {
+    color: white;
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.iconButton a:hover {
+    scale: 1.1;
+}
+
+#icons {
+    position: relative;
+    bottom: -3px;
+}
+
+#icons a {
+    color: white;
+    display: inline-block;
+    min-width: 31px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#icons a:hover {
+    scale: 1.1;
+}
+
+#bio, a {
+    font-weight: 300;
+}
+
+#bio {
+    margin-bottom: 5px;
+}
+
+.section--text, a {
+    font-weight: 300;
+}
+
+.section--text {
+    max-width: 97%;
+    margin-bottom: 5px;
+}
+
+.age {
+    color: var(--mainTextColor)
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+#contact-table {
+    border-collapse: collapse;
+    margin-top: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+}
+
+#contact-table thead tr {
+    background-color: #009879;
+    color: var(--secondaryTextColor);
+    text-align: left;
+}
+
+#contact-table th,
+#contact-table td {
+    color: var(--secondaryTextColor);
+    padding: 12px 15px;
+}
+
+#contact-table tbody tr {
+    border-bottom: 1px solid var(--mainBgColor);
+}
+
+@media only screen and (max-width: 768px) {
+    .section--page{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    #container--main {
+        max-width: 500px;
+    }
+
+    #wrapper--hero {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    #wrapper--user-bio {
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    #profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    #wrapper--user {
+        margin-top: 40px auto;
+    }
+}
