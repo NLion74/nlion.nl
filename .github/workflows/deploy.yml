@@ -1,0 +1,35 @@
+name: Deploy Website
+
+on:
+    workflow_dispatch:
+    push:
+        branches: ["main"]
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Initialize the ssh-agent
+              uses: webfactory/ssh-agent@v0.4.1
+              with:
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+            - name: Scan the host key
+              run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+              env:
+                  DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
+
+            - name: Deploy the website
+              run: >-
+                  rsync -avx --delete ./* $DEPLOY_USERNAME@$DEPLOY_SERVER:/root/web/contact-nlion
+              env:
+                  DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
+                  DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
