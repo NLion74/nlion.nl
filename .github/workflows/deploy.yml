@@ -20,7 +20,7 @@ jobs:
             - name: Initialize the ssh-agent
               uses: webfactory/ssh-agent@v0.4.1
               with:
-                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  ssh-private-key: ${{ secrets.DEPLOY_SSHKEY }}
 
             - name: Scan the host key
               run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
@@ -29,7 +29,7 @@ jobs:
 
             - name: Deploy the website
               run: >-
-                  rsync -avx --delete ./* $DEPLOY_USERNAME@$DEPLOY_SERVER:/root/web/contact-nlion
+                  rsync -avx --delete ./* $DEPLOY_USER@$DEPLOY_SERVER:/root/web/contact-nlion
               env:
                   DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
-                  DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+                  DEPLOY_USERNAME: ${{ secrets.DEPLOY_USER }}
