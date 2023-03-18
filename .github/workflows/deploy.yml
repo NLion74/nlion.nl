@@ -1,4 +1,4 @@
-name: Deploy Website
+name: CI
 
 on:
     workflow_dispatch:
@@ -12,6 +12,7 @@ concurrency:
 jobs:
     deploy:
         runs-on: ubuntu-latest
+        environment: deploy
 
         steps:
             - name: Checkout
@@ -29,7 +30,8 @@ jobs:
 
             - name: Deploy the website
               run: >-
-                  rsync -avx --delete ./* $DEPLOY_USER@$DEPLOY_SERVER:/root/web/contact-nlion
+                  rsync -rvz --delete -e \'ssh -p $DEPLOY_PORT\' ./* $DEPLOY_USER@$DEPLOY_SERVER:/root/web/contact-nlion
               env:
                   DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
+                  DEPLOY_PORT: ${{ secrets.DEPLOY_SERVER }}
                   DEPLOY_USERNAME: ${{ secrets.DEPLOY_USER }}
