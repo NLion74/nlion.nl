@@ -31,7 +31,8 @@ jobs:
 
             - name: Deploy the website
               run: >-
-                  rsync -rvz --delete -e 'ssh -p 44618' ./ $DEPLOY_USER@$DEPLOY_SERVER:/docker/web/contact-nlion
+                  ssh -p 44618 $DEPLOY_USERNAME@$DEPLOY_SERVER rm -rf /docker/web/contact-nlion/* &&
+                  sftp -P 44618 $DEPLOY_USERNAME@$DEPLOY_SERVER:docker/web/contact-nlion/ <<< $'put -r ./*'
               env:
                   DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
                   DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
