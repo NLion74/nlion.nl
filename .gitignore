@@ -1,2 +1,5 @@
 deploy.ppk
 deploy.pem
+id_rsa
+id_rsa.pub
+priv.ppk
