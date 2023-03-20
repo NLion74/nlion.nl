@@ -31,7 +31,7 @@ jobs:
 
             - name: Deploy the website
               run:
-                  ssh -p 44618 $DEPLOY_USERNAME@$DEPLOY_SERVER "mv deployment/index.html ./index.html && rm -rf -v !("index.html") /docker/web/contact-nlion/*" &&
+                  ssh -p 44618 $DEPLOY_USERNAME@$DEPLOY_SERVER rm -rf /docker/web/contact-nlion/* &&
                   sftp -P 44618 $DEPLOY_USERNAME@$DEPLOY_SERVER:/docker/web/contact-nlion/ <<< $'put -r ./src/*'
               env:
                   DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
