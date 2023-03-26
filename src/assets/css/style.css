@@ -218,19 +218,13 @@ a {
     display: inline-block;
 }
 
-.socials {
-    padding-top: 20px;
-}
-
-.socials a {
+#socials a {
     font-weight: 300;
-    color: #c5c5c5;
     word-break: break-all;
 }
 
-.socials a:hover {
+#socials a:hover {
     font-weight: 100;
-    text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
@@ -262,5 +256,11 @@ a {
 
     #wrapper--user {
         margin-top: 40px auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .link_title {
+        display: block;
     }
 }
