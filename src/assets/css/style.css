@@ -92,6 +92,20 @@ a:hover {
     color: #fff;
 }
 
+#navbar--wrapper {
+    background-color: #111111;
+    border-bottom: 1px solid #222222;
+    padding: 1rem 0.5rem;
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+}
+
+#navbar {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 10px;
+}
+
 #container--main {
     max-width: 700px;
     margin: 0 auto;
@@ -138,35 +152,6 @@ a:hover {
     margin-right: 5px;
 }
 
-.iconButton {
-    color: white;
-    display: inline-block;
-    font-size: 2em;
-    text-align: center;
-    border-radius: 2px;
-}
-
-.iconButton a:hover {
-    scale: 1.1;
-}
-
-#icons {
-    position: relative;
-    bottom: -3px;
-}
-
-#icons a {
-    color: white;
-    display: inline-block;
-    min-width: 31px;
-    text-align: center;
-    border-radius: 2px;
-}
-
-#icons a:hover {
-    scale: 1.1;
-}
-
 #bio,
 a {
     font-weight: 300;
@@ -188,6 +173,10 @@ a {
 
 .highlight {
     color: var(--mainTextColor);
+}
+
+.cyan {
+    color: cyan;
 }
 
 .margin-top {
@@ -220,6 +209,28 @@ a {
 
 #contact-table tbody tr {
     border-bottom: 1px solid var(--mainBgColor);
+}
+
+.link_title {
+    font-weight: 300;
+    font-size: 0.9em;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.socials {
+    padding-top: 20px;
+}
+
+.socials a {
+    font-weight: 300;
+    color: #c5c5c5;
+    word-break: break-all;
+}
+
+.socials a:hover {
+    font-weight: 100;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
