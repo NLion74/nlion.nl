@@ -92,6 +92,33 @@ a:hover {
     color: #fff;
 }
 
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.section--text,
+a {
+    font-weight: 300;
+}
+
+.section--text {
+    max-width: 97%;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    color: var(--mainTextColor);
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
 #navbar--wrapper {
     background-color: #111111;
     border-bottom: 1px solid #222222;
@@ -110,11 +137,6 @@ a:hover {
     max-width: 700px;
     margin: 0 auto;
     padding: 1em;
-}
-
-.section--page {
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 #wrapper--hero {
@@ -161,30 +183,43 @@ a {
     margin-bottom: 5px;
 }
 
-.section--text,
-a {
-    font-weight: 300;
-}
-
-.section--text {
-    max-width: 97%;
-    margin-bottom: 5px;
-}
-
-.highlight {
+#introduction {
+    font-size: 44px;
+    font-weight: 600;
     color: var(--mainTextColor);
+    display: flex;
+    transition-duration: 0.2s;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 
-.cyan {
+#user--main {
     color: cyan;
+    padding-left: 0.75rem;
+    transition-duration: 0.2s;
+    line-height: 1;
 }
 
-.margin-top {
-    margin-top: 15px;
+#user--main:hover {
+    transform: rotate(10deg);
+    content: "whatever it is you want to add";
 }
 
-.no-margin-bottom {
-    margin-bottom: 0;
+#user--aka {
+    padding-left: 0.7rem;
+    padding-top: 1.2rem;
+    font-size: 22px;
+    line-height: 1;
+}
+
+#first--paragraph {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+#second--paragraph {
+    margin-top: 2rem;
 }
 
 #contact-table {
@@ -196,7 +231,6 @@ a {
 }
 
 #contact-table thead tr {
-    background-color: #009879;
     color: var(--secondaryTextColor);
     text-align: left;
 }
@@ -257,10 +291,41 @@ a {
     #wrapper--user {
         margin-top: 40px auto;
     }
+
+    #introduction {
+        font-size: 32px;
+    }
+
+    #user--main {
+        padding-left: 0.6rem;
+    }
+
+    #user--aka {
+        font-size: 16px;
+        padding-top: 0.85rem;
+        padding-left: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .link_title {
         display: block;
+    }
+
+    #introduction {
+        display: inline-block;
+    }
+
+    #user--aka {
+        display: inline-block;
+        padding-left: 0;
+    }
+
+    #user--main {
+        padding-left: 0;
+    }
+
+    #first--paragraph {
+        font-size: 16px;
     }
 }
