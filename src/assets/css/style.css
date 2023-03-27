@@ -222,6 +222,18 @@ a {
     margin-top: 2rem;
 }
 
+.skill {
+    font-weight: 300;
+    font-size: 0.9em;
+    min-width: 75%;
+    display: inline-block;
+}
+
+#skill-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
 #contact-table {
     border-collapse: collapse;
     margin-top: 25px 0;
@@ -309,6 +321,10 @@ a {
 
 @media only screen and (max-width: 480px) {
     .link_title {
+        display: block;
+    }
+
+    .skill {
         display: block;
     }
 
