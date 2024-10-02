@@ -122,6 +122,14 @@ a {
     font-family: inherit;
 }
 
+#age-width-index {
+    width: 5.8em;
+}
+
+#age-width-about {
+    width: 6.05em
+}
+
 .margin-top {
     margin-top: 15px;
 }
