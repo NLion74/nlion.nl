@@ -111,6 +111,17 @@ a {
     color: var(--mainTextColor);
 }
 
+.age-box {
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.age {
+    font-size: inherit;
+    font-family: inherit;
+}
+
 .margin-top {
     margin-top: 15px;
 }

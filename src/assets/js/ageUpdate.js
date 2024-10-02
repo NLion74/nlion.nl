@@ -17,11 +17,9 @@ function getAge() {
 }
 
 function updateAge() {
-    // Update every second (1000 milliseconds)
     setInterval(() => {
         setAge(getAge());
-    }, 8);
+    }, 10);
 }
 
-// Start the age update
 updateAge();
