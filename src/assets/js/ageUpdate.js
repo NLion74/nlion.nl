@@ -1,32 +1,27 @@
-function setAge(age_string) {
+function setAge(ageString) {
     const elements = document.querySelectorAll(".age");
-
     for (let element of elements) {
-        element.innerHTML = age_string;
+        element.innerHTML = ageString;
     }
 }
 
 function getAge() {
-    const time =
-        (new Date(
-            new Date().toLocaleString({ timeZone: "Europe/Berlin" })
-        ).getTime() -
-            // Date 2007-09-09 is equal to 2007-10-9 because january is 0 and december 11
-            new Date(
-                new Date(2007, 9, 9, 0, 0, 0).toLocaleString({
-                    timeZone: "Europe/Berlin",
-                })
-            ).getTime()) /
-        (1000 * 60 * 60 * 24 * 365.25); // milliseconds per year
-    const age = time.toString().substring(0, 11);
+    const birthDate = new Date(2007, 9, 9); // October is month 9 (zero-indexed)
+    const today = new Date();
+    
+    const ageInMilliseconds = today - birthDate;
+    const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Convert to years
+    const age = ageInYears.toFixed(10); // Format to 2 decimal places
 
     return age;
 }
 
 function updateAge() {
+    // Update every second (1000 milliseconds)
     setInterval(() => {
         setAge(getAge());
-    }, 10);
+    }, 8);
 }
 
+// Start the age update
 updateAge();
