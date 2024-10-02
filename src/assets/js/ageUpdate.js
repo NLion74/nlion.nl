@@ -11,7 +11,7 @@ function getAge() {
     
     const ageInMilliseconds = today - birthDate;
     const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Convert to years
-    const age = ageInYears.toFixed(10); // Format to 2 decimal places
+    const age = ageInYears.toFixed(8); // Format to 2 decimal places
 
     return age;
 }
