@@ -1,3 +1,6 @@
+// Using luxon for date time because the other code was huge a mess
+const { DateTime } = luxon;
+
 function setAge(ageString) {
     const elements = document.querySelectorAll(".age");
     for (let element of elements) {
@@ -6,14 +9,13 @@ function setAge(ageString) {
 }
 
 function getAge() {
-    const birthDate = new Date(2007, 9, 9); // October is month 9 (zero-indexed)
-    const today = new Date();
-    
-    const ageInMilliseconds = today - birthDate;
-    const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Convert to years
-    const age = ageInYears.toFixed(8); // Format to 2 decimal places
+    const today = DateTime.now().setZone("Europe/Berlin");
 
-    return age;
+    const birthDate = DateTime.fromISO("2007-10-09", { zone: "Europe/Berlin" });
+
+    const ageInYears = today.diff(birthDate, 'years').years;
+
+    return ageInYears.toFixed(8);
 }
 
 function updateAge() {
