@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+Allow: /contact
+Allow: /about
+Allow: /assets/js
+Allow: /assets/css
+
+Sitemap: https://nlion.nl/sitemap.xml
