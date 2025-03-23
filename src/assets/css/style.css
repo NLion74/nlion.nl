@@ -315,24 +315,6 @@ a {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
-    .portfolio-container {
-        justify-content: center;
-    }
-
-    .idea {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .portfolio-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
 #github-stars {
     color: var(--mainTextColor-dark);
     font-weight: bold;
@@ -390,6 +372,15 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+    .portfolio-container {
+        justify-content: center;
+    }
+
+    .idea {
+        width: 100%;
+        max-width: 400px;
+    }
+
     .section--page {
         padding-top: 1em;
         padding-bottom: 1em;
@@ -436,6 +427,11 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
+    .portfolio-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .link_title {
         display: block;
     }
