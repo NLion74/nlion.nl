@@ -7,6 +7,7 @@
     --mainLinkColorHover-dark: rgb(20, 150, 175);
     --mainBorderColor-dark: #2b3031;
     --mainBgColor-dark: #131415;
+    --secondaryBgColor-dark: #222222;
 
     --mainTextColor: var(--mainTextColor-dark);
     --secondaryTextColor: var(--secondaryTextColor-dark);
@@ -127,7 +128,7 @@ a {
 }
 
 #age-width-about {
-    width: 6.05em
+    width: 6.05em;
 }
 
 .margin-top {
@@ -231,6 +232,10 @@ a {
     line-height: 1;
 }
 
+#secondary--text {
+    font-weight: 600;
+}
+
 #first--paragraph {
     font-size: 18px;
     font-weight: 600;
@@ -251,6 +256,98 @@ a {
 #skill-icon {
     font-size: 1rem;
     line-height: 1;
+}
+
+#portfolio {
+    background-color: var(--mainBgColor);
+}
+
+#portfolio h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.idea {
+    background-color: var(--secondaryBgColor-dark);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.idea h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: var(--mainTextColor);
+}
+
+.idea p {
+    margin-top: 10px;
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+.portfolio-link {
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: bold;
+}
+
+.portfolio-link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio-container {
+        justify-content: center;
+    }
+
+    .idea {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .portfolio-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+#github-stars {
+    color: var(--mainTextColor-dark);
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.star-symbol {
+    color: var(--mainTextColor-dark);
+    font-size: 1.5em;
+    margin-right: 2px;
+}
+
+.star-count {
+    color: var(--mainTextColor-dark);
+    font-size: 1.3em;
 }
 
 #contact-table {
