@@ -11,9 +11,11 @@ function setAge(ageString) {
 function getAge() {
     const today = DateTime.now().setZone("Europe/Berlin");
 
-    const birthDate = DateTime.fromISO("2007-10-09", { zone: "Europe/Berlin" });
+    const birthDate = DateTime.fromISO("2007-10-09T07:07:00", {
+        zone: "Europe/Berlin",
+    });
 
-    const ageInYears = today.diff(birthDate, 'years').years;
+    const ageInYears = today.diff(birthDate, "years").years;
 
     return ageInYears.toFixed(8);
 }
