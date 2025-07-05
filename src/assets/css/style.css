@@ -275,6 +275,9 @@ a {
 }
 
 .idea {
+    display: flex; /* Make .idea a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Push content apart vertically */
     background-color: var(--secondaryBgColor-dark);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -303,7 +306,7 @@ a {
 }
 
 .portfolio-link {
-    margin-top: 15px;
+    margin-top: auto;
     display: inline-block;
     text-decoration: none;
     color: var(--mainLinkColor);
@@ -315,7 +318,7 @@ a {
     font-weight: bold;
 }
 
-#github-stars {
+.github-stars {
     color: var(--mainTextColor-dark);
     font-weight: bold;
     margin-top: 4px;

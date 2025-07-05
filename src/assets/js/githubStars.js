@@ -1,15 +1,24 @@
 async function fetchGitHubStars() {
-    const response = await fetch(
-        "https://api.github.com/repos/NLion74/Matrix-Notifier"
-    );
-    const data = await response.json();
+    const elements = document.querySelectorAll(".github-stars");
 
-    const starsElement = document.getElementById("github-stars");
+    for (const el of elements) {
+        const repo = el.getAttribute("data-repo");
+        if (!repo) continue;
 
-    if (data.stargazers_count) {
-        starsElement.innerHTML = `<span class="star-symbol">★</span> <span class="star-count">${data.stargazers_count}</span>`;
-    } else {
-        starsElement.textContent = "Failed to load stars";
+        try {
+            const response = await fetch(
+                `https://api.github.com/repos/${repo}`
+            );
+            const data = await response.json();
+
+            if (data.stargazers_count !== undefined) {
+                el.innerHTML = `<span class="star-symbol">★</span> <strong class="star-count">${data.stargazers_count}</strong>`;
+            } else {
+                el.textContent = "Failed to load stars";
+            }
+        } catch (error) {
+            el.textContent = "Error fetching stars";
+        }
     }
 }
 
