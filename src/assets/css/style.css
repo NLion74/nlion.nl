@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 :root {
     --mainTextColor-dark: #fff;
@@ -305,8 +306,12 @@ a {
     font-size: 1em;
 }
 
-.portfolio-link {
+.project-link {
     margin-top: auto;
+}
+
+.portfolio-link {
+    order: 2;
     display: inline-block;
     text-decoration: none;
     color: var(--mainLinkColor);
@@ -321,7 +326,12 @@ a {
 .github-stars {
     color: var(--mainTextColor-dark);
     font-weight: bold;
-    margin-top: 4px;
+    margin-bottom: 0.5em;
+    order: 1;
+}
+
+.idea p.github-stars {
+    margin-top: 0;
 }
 
 .star-symbol {
@@ -333,6 +343,33 @@ a {
 .star-count {
     color: var(--mainTextColor-dark);
     font-size: 1.3em;
+}
+
+.project-tags {
+    margin-top: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.tag {
+    font-family: "Poppins", sans-serif;
+    background-color: #1c1d1e;
+    color: #d0d0d0;
+    border: 1px solid var(--mainBorderColor);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+    background-color: var(--mainLinkColor-dark);
+    color: #000;
+    cursor: default;
 }
 
 #contact-table {
