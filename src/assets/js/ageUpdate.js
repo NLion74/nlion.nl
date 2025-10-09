@@ -11,7 +11,7 @@ function setAge(ageString) {
 function getAge() {
     const today = DateTime.now().setZone("Europe/Berlin");
 
-    const birthDate = DateTime.fromISO("2007-10-09T07:07:00", {
+    const birthDate = DateTime.fromISO("2007-10-09T19:07:00", {
         zone: "Europe/Berlin",
     });
 
