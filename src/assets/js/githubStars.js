@@ -11,13 +11,16 @@ async function fetchGitHubStars() {
             );
             const data = await response.json();
 
-            if (data.stargazers_count !== undefined) {
+            console.log(data);
+
+            if (data.stargazers_count > 0) {
                 el.innerHTML = `<span class="star-symbol">★</span> <strong class="star-count">${data.stargazers_count}</strong>`;
             } else {
-                el.textContent = "Failed to load stars";
+                el.style.display = "none";
             }
         } catch (error) {
             el.textContent = "Error fetching stars";
+            el.style.display = "none";
         }
     }
 }
