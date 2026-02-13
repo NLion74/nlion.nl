@@ -7,7 +7,7 @@ async function fetchGitHubStars() {
 
         try {
             const response = await fetch(
-                `https://api.github.com/repos/${repo}`
+                `https://api.github.com/repos/${repo}`,
             );
             const data = await response.json();
 

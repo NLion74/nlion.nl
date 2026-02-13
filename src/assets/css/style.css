@@ -35,9 +35,19 @@ body {
 
 p,
 span,
-li {
+li,
+i,
+strong {
     color: var(--secondaryTextColor);
     font-size: 1em;
+}
+
+strong {
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
 }
 
 a {
@@ -95,8 +105,8 @@ a:hover {
 }
 
 .section--page {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0em;
+    padding-bottom: 0em;
 }
 
 .section--text,
@@ -297,6 +307,7 @@ a {
 .idea h3 {
     margin-top: 15px;
     font-size: 1.5em;
+    margin-bottom: 0px;
     color: var(--mainTextColor);
 }
 
@@ -363,7 +374,9 @@ a {
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 600;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .tag:hover {
@@ -409,6 +422,17 @@ a {
 
 #socials a:hover {
     font-weight: 100;
+}
+
+/* GitHub inline stats styling */
+.github-stat {
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.github-stat:empty::after {
+    content: "...";
+    opacity: 0.5;
 }
 
 @media only screen and (max-width: 768px) {
