@@ -19,7 +19,7 @@
 }
 
 * {
-    font-family: "Readex Pro";
+    font-family: "Readex Pro", sans-serif;
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
@@ -46,7 +46,8 @@ strong {
     font-weight: 600;
 }
 
-i {
+i,
+.italic {
     font-style: italic;
 }
 
@@ -107,6 +108,12 @@ a:hover {
 .section--page {
     padding-top: 0em;
     padding-bottom: 0em;
+}
+
+.section--split {
+    margin-top: 2.4rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--mainBorderColor);
 }
 
 .section--text,
@@ -243,7 +250,7 @@ a {
     line-height: 1;
 }
 
-#secondary--text {
+.secondary--text {
     font-weight: 600;
 }
 
@@ -257,11 +264,63 @@ a {
     margin-top: 2rem;
 }
 
+#about #second--paragraph {
+    border-left: 2px solid var(--mainBorderColor);
+    padding-left: 0.95rem;
+}
+
+#about #second--paragraph p {
+    margin: 0.9rem 0;
+    transition: color 0.2s ease;
+}
+
+#about #second--paragraph p:hover,
+#about #second--paragraph span:hover {
+    color: #c9ced0;
+}
+
 .skill {
     font-weight: 300;
     font-size: 0.9em;
-    min-width: 75%;
     display: inline-block;
+}
+
+#skills--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem 1rem;
+    margin-top: 0.25rem;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.1rem 0;
+    border-bottom: 1px solid rgba(43, 48, 49, 0.55);
+}
+
+.skill-level {
+    font-family: "Readex Pro", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    color: var(--secondaryTextColor);
+    white-space: nowrap;
+}
+
+.skill-level.advanced,
+.skill-level.fluent,
+.skill-level.proficient,
+.skill-level.intermediate,
+.skill-level.novice,
+.skill-level.working {
+    border-color: transparent;
+    color: var(--secondaryTextColor);
 }
 
 #skill-icon {
@@ -387,7 +446,7 @@ a {
 
 #contact-table {
     border-collapse: collapse;
-    margin-top: 25px 0;
+    margin: 25px 0 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
@@ -424,6 +483,37 @@ a {
     font-weight: 100;
 }
 
+#socials p {
+    margin: 0.5rem 0;
+}
+
+#site-footer {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--mainBorderColor);
+    background-color: #111213;
+}
+
+.footer-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.75rem;
+    padding-bottom: 1.4rem;
+}
+
+.footer-content h2 {
+    margin-top: 0.3rem;
+    margin-bottom: 0.55rem;
+    font-size: 1.05rem;
+}
+
+.footer-text {
+    margin-top: 0;
+    font-size: 0.95rem;
+    color: var(--secondaryTextColor);
+}
+
 /* GitHub inline stats styling */
 .github-stat {
     font-weight: 600;
@@ -436,6 +526,10 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+    #skills--wrapper {
+        grid-template-columns: 1fr;
+    }
+
     .portfolio-container {
         justify-content: center;
     }
@@ -448,6 +542,11 @@ a {
     .section--page {
         padding-top: 1em;
         padding-bottom: 1em;
+    }
+
+    .section--split {
+        margin-top: 1.8rem;
+        padding-top: 0.55rem;
     }
 
     #container--main {
@@ -501,7 +600,7 @@ a {
     }
 
     .skill {
-        display: block;
+        font-size: 0.9em;
     }
 
     #introduction {

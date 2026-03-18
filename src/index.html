@@ -1,87 +1,584 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>nlion - home</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta property="og:type" content="website">
-    <script defer data-domain="nlion.nl" src="https://plsbl.de/js/script.js"></script>
-    <script defer src="/assets/js/emailObfuscation.js?v=4.0"></script>
-    <script src="/assets/js/luxon.min.js"></script>
-    <script defer src="/assets/js/ageUpdate.js?v=5.1"></script>
-    <meta name="description" content="">
-    <link rel="icon" href="/assets/images/favicon.ico?v=4.0">
-    <link rel="stylesheet" href="/assets/css/style.css?v=4.3">
-</head>
-<body>
-    <header id="navbar--wrapper">
-        <nav id="navbar">
-            <a href="/" rel="noreferrer">Home</a>
+    <head>
+        <title>nlion</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:type" content="website" />
+        <script
+            defer
+            data-domain="nlion.nl"
+            src="https://plsbl.de/js/script.js"
+        ></script>
+        <script src="/assets/js/luxon.min.js"></script>
+        <script defer src="/assets/js/ageUpdate.js?v=5.1"></script>
+        <script defer src="/assets/js/githubStars.js?v=4.0"></script>
+        <script defer src="/assets/js/emailObfuscation.js?v=4.0"></script>
+        <meta
+            name="description"
+            content="Minimalist developer focused on practical full-stack solutions, systems thinking, and building things from scratch."
+        />
+        <link rel="icon" href="/assets/images/favicon.ico?v=4.0" />
+        <link rel="stylesheet" href="/assets/css/style.css?v=4.3" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css"
+        />
+    </head>
+    <body>
+        <header id="navbar--wrapper">
+            <nav id="navbar">
+                <a href="#about" rel="noreferrer">About</a>
                 /
-            <a href="/about" rel="noreferrer">About</a>
+                <a href="#skills" rel="noreferrer">Skills</a>
                 /
-            <a href="/contact" rel="noreferrer">Contact & Socials</a>
-        </nav>
-    </header>
-    <div id="container--main">
-        <section id="wrapper--hero" class="section--page">
-        <img id="profile-pic" src="/assets/images/nlion.png" draggable="false">
-        <div id="wrapper--user-bio">
-            <div id="wrapper--user">
-                <h1 id="user-name">nlion</h1>
-            </div>
-            <p id="bio">
-                Hey, I'm a 
-                <span class="age-box" id="age-width-index">
-                    <span class="age highlight">
-                        <noscript>17</noscript>
+                <a href="#portfolio" rel="noreferrer">Portfolio</a>
+                /
+                <a href="#contact" rel="noreferrer">Contact</a>
+                /
+                <a href="#socials" rel="noreferrer">Socials</a>
+            </nav>
+        </header>
+
+        <main id="container--main">
+            <section id="about" class="section--page">
+                <p id="introduction" class="section--text">
+                    Hey! I'm
+                    <span id="user--main">nlion</span>
+                    <span id="user--aka">aka NLion74</span>
+                </p>
+                <p id="first--paragraph" class="section--text">
+                    I'm currently
+                    <span class="age-box" id="age-width-about">
+                        <span class="age highlight">
+                            <noscript>18</noscript>
+                        </span>
                     </span>
-                </span> 
-                Full-Stack Developer and Self-Hosting enthusiast from Germany.
-            </p>
-        </div>
-        </section>
-        <section class="section--page">
-            <h2>Contact Methods</h2>
-            <p class="section--text no-margin-bottom">Feel free to use PGP when sending me messages over any platform listed below. You can copy my PGP Key from <a href="https://nlion.nl/pgp.txt">nlion.nl/pgp.txt</a> or import it using the following command: </p>
-            <code class="section--text">curl -sL https://nlion.nl/pgp.txt | gpg --import</code>
-            <div class="margin-top" id="contact-table">
-                <table>
-                    <tr>
-                        <td >
-                            <strong>Username</strong>
-                        </td>
-                        <td>
-                            <strong>Platform</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a class="mail_obfuscate mail_obfuscate_mailto" href="mailto:bG4ubm9pbG5Abm9pbG4=">bG4ubm9pbG5Abm9pbG4=</a>
-                            <noscript> - Decryption requires javascript</noscript>
-                        </td>
-                        <td>Email (PGP Encrypt if needed)</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://matrix.to/#/@nlion:nlion.nl" rel="noreferrer noopener" target="_blank" title="https://matrix.to/#/@nlion:nlion.nl">@nlion:nlion.nl</a>
-                        </td>
-                        <td>Matrix (matrix.org project)</td>
-                    </tr>
-                    <tr>
-                        <td>nlion74</td>
-                        <td>Discord</td>
-                    </tr>
-                </table>
+                    years old and living in northern Germany.
+                </p>
+                <div id="second--paragraph" class="section--text">
+                    <p>
+                        I am (so far) an entirely self-taught developer. My
+                        fascination with programming began when I was twelve,
+                        which was over half a decade ago now. I generally prefer
+                        to work in the backend, but I also dabble in
+                        frontend/full-stack development. I am an avid Linux
+                        enthusiast, a leftist, and prospective computer science
+                        student.
+                    </p>
+                    <p>
+                        Within this field, I generally love to build things from
+                        scratch to understand how they work underneath. However,
+                        beyond that, my interests constantly shift (as they do
+                        with ADHD); they often include math, and especially its
+                        use in computer science, as well as psychology,
+                        philosophy, and the natural sciences in general.
+                    </p>
+                    <p>
+                        Of course, not all my interests sound so grand; they can
+                        be quite trivial, in fact: I have an obsession with
+                        every modern hot beverage, coffee, tea, and matcha
+                        (although this is technically tea). I am also quite
+                        addicted to climbing plastic rock, or bouldering. I am
+                        also a keen user of
+                        <a href="https://letterboxd.com/nlion/" target="_blank"
+                            >Letterboxd</a
+                        >
+                        and
+                        <a
+                            href="https://app.thestorygraph.com/profile/nlion"
+                            target="_blank"
+                            >Storygraph</a
+                        >, used to watch a lot of anime, and like to read
+                        novels. You can find my tracking platforms for these
+                        three things below.
+                    </p>
+                </div>
+            </section>
+
+            <section id="skills" class="section--page">
+                <h2>Skills</h2>
+                <div id="skills--wrapper">
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-python-plain"></i> Python</span
+                        ><span class="skill-level advanced">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-rust-plain"></i> Rust</span
+                        ><span class="skill-level advanced">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-typescript-plain"></i> JavaScript
+                            & TypeScript</span
+                        ><span class="skill-level intermediate">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-bash-plain"></i> Bash</span
+                        ><span class="skill-level intermediate"
+                            >Intermediate</span
+                        >
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-php-plain"></i> PHP</span
+                        ><span class="skill-level intermediate"
+                            >Intermediate</span
+                        >
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-c-plain"></i> C</span
+                        ><span class="skill-level proficient">Proficient</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-mysql-plain"></i> SQL</span
+                        ><span class="skill-level proficient">Proficient</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-devicon-plain"></i>
+                            Assembly</span
+                        ><span class="skill-level novice">Novice</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-docker-plain"></i> Docker</span
+                        ><span class="skill-level advanced">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-flask-plain"></i> Flask</span
+                        ><span class="skill-level advanced">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-nextjs-plain"></i> Next.js &
+                            React</span
+                        ><span class="skill-level advanced">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-nodejs-plain"></i> Node.js</span
+                        ><span class="skill-level advanced">Advanced</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-git-plain"></i> Github Actions /
+                            CI</span
+                        ><span class="skill-level intermediate"
+                            >Intermediate</span
+                        >
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-linux-plain"></i> Linux CLI</span
+                        ><span class="skill-level fluent">Fluent</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-git-plain"></i> Git</span
+                        ><span class="skill-level working"
+                            >Working Knowledge</span
+                        >
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-express-original"></i>
+                            Express.js</span
+                        ><span class="skill-level novice">Novice</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill"
+                            ><i class="devicon-wordpress-plain"></i>
+                            WordPress</span
+                        ><span class="skill-level intermediate"
+                            >Intermediate</span
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="section--text">
+                <h2>My Portfolio</h2>
+                <div class="portfolio-container">
+                    <div class="idea">
+                        <img
+                            src="/assets/images/arch-manwarn.png"
+                            alt="arch-manwarn"
+                            class="portfolio-image"
+                        />
+                        <h3>arch-manwarn</h3>
+                        <p>
+                            A minimalist
+                            <a
+                                href="https://aur.archlinux.org/packages/arch-manwarn"
+                                >AUR package</a
+                            >
+                            written in Rust that checks Arch news for manual
+                            intervention notices and blocks pacman upgrades or
+                            installs when needed.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#Rust</span>
+                            <span class="tag">#Terminal</span>
+                            <span class="tag">#ArchLinux</span>
+                        </div>
+                        <div class="project-link">
+                            <p
+                                class="github-stars"
+                                data-repo="NLion74/arch-manwarn"
+                            >
+                                <span class="star-symbol">★</span>...
+                            </p>
+                            <a
+                                href="https://github.com/NLion74/arch-manwarn"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/ics-webuntis.png"
+                            alt="ics-webuntis"
+                            class="portfolio-image"
+                        />
+                        <h3>ICS-WebUntis</h3>
+                        <p>
+                            A lightweight service that exports timetables from
+                            WebUntis as .ics calendar feeds.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#TypeScript</span>
+                            <span class="tag">#API</span>
+                            <span class="tag">#WebUntis</span>
+                        </div>
+                        <div class="project-link">
+                            <p
+                                class="github-stars"
+                                data-repo="NLion74/ics-webuntis"
+                            >
+                                <span class="star-symbol">★</span>...
+                            </p>
+                            <a
+                                href="https://github.com/NLion74/ics-webuntis"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/Matrix-Notifier.png"
+                            alt="Matrix-Notifier"
+                            class="portfolio-image"
+                        />
+                        <h3>Matrix-Notifier</h3>
+                        <p>
+                            API for sending messages over the
+                            <a href="https://matrix.org/">Matrix</a> protocol,
+                            built with matrix-nio and fully containerized with
+                            Docker.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#Python</span>
+                            <span class="tag">#Docker</span>
+                            <span class="tag">#Matrix</span>
+                            <span class="tag">#API</span>
+                        </div>
+                        <div class="project-link">
+                            <p
+                                class="github-stars"
+                                data-repo="NLion74/Matrix-Notifier"
+                            >
+                                <span class="star-symbol">★</span>...
+                            </p>
+                            <a
+                                href="https://github.com/NLion74/Matrix-Notifier"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/social-animal.png"
+                            alt="SocialAnimal project"
+                            class="portfolio-image"
+                        />
+                        <h3>SocialAnimal</h3>
+                        <p>
+                            An open source, selfhostable social platform to
+                            share calendars, from different external providers
+                            with each other. Still in early development. Project
+                            available at
+                            <a href="https://socialanimal.net" target="_blank"
+                                >socialanimal.net</a
+                            >.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#TypeScript</span>
+                            <span class="tag">#FullStack</span>
+                        </div>
+                        <div class="project-link">
+                            <p
+                                class="github-stars"
+                                data-repo="NLion74/SocialAnimal"
+                            >
+                                <span class="star-symbol">★</span>...
+                            </p>
+                            <a
+                                href="https://github.com/NLion74/SocialAnimal"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/meuron.png"
+                            alt="Meuron"
+                            class="portfolio-image"
+                        />
+                        <h3>Meuron</h3>
+                        <p>
+                            A simple, modular neural network library for Rust
+                            that supports feed-forward layers, multiple cost
+                            functions, and activation functions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#Rust</span>
+                            <span class="tag">#NeuralNetworks</span>
+                            <span class="tag">#Math</span>
+                            <span class="tag">#MachineLearning</span>
+                        </div>
+                        <div class="project-link">
+                            <p class="github-stars" data-repo="NLion74/Meuron">
+                                <span class="star-symbol">★</span>...
+                            </p>
+                            <a
+                                href="https://github.com/NLion74/Meuron"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/rust-webserver-new.png"
+                            alt="Rust-Webserver"
+                            class="portfolio-image"
+                        />
+                        <h3>Rust-Webserver</h3>
+                        <p>
+                            A simple implementation of a web server written in
+                            Rust that explores the inner workings of modern
+                            networking.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#Rust</span>
+                            <span class="tag">#WebServer</span>
+                            <span class="tag">#Networking</span>
+                            <span class="tag">#HTTP</span>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://github.com/NLion74/Rust-Webserver"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/photography-portfolio-alt.png"
+                            alt="Freelance portfolio site"
+                            class="portfolio-image"
+                        />
+                        <h3>Freelance Site</h3>
+                        <p>
+                            My first professional freelance project: a portfolio
+                            website for a photographer.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#WebDev</span>
+                            <span class="tag">#HTML</span>
+                            <span class="tag">#Freelance</span>
+                        </div>
+                        <div class="project-link">
+                            <a
+                                href="https://matthis-muehr.de/"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="idea">
+                        <img
+                            src="/assets/images/rust-3D-engine.png"
+                            alt="3D engine rendering"
+                            class="portfolio-image"
+                        />
+                        <h3>3D Engine</h3>
+                        <p>
+                            A very experimental 3D rendering engine built from
+                            scratch in Rust using only minifb for window
+                            management.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">#Rust</span>
+                            <span class="tag">#3D</span>
+                            <span class="tag">#Graphics</span>
+                            <span class="tag">#Math</span>
+                        </div>
+                        <div class="project-link">
+                            <p
+                                class="github-stars"
+                                data-repo="NLion74/rust-3D-engine"
+                            >
+                                <span class="star-symbol">★</span>...
+                            </p>
+                            <a
+                                href="https://github.com/NLion74/rust-3D-engine"
+                                target="_blank"
+                                class="portfolio-link"
+                                >View Project</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section--page section--split">
+                <h2>Contact</h2>
+                <p class="section--text no-margin-bottom">
+                    Feel free to reach out for collaborations or potential
+                    hiring opportunities. My PGP key is available at
+                    <a href="https://nlion.nl/pgp.txt">nlion.nl/pgp.txt</a> and
+                    can be imported with:
+                </p>
+                <code class="section--text"
+                    >curl -sL https://nlion.nl/pgp.txt | gpg --import</code
+                >
+                <div class="margin-top" id="contact-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Username</th>
+                                <th scope="col">Platform</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a
+                                        class="mail_obfuscate mail_obfuscate_mailto"
+                                        href="mailto:bG4ubm9pbG5Abm9pbG4="
+                                        >bG4ubm9pbG5Abm9pbG4=</a
+                                    >
+                                    <noscript>
+                                        - Decryption requires
+                                        javascript</noscript
+                                    >
+                                </td>
+                                <td>Email (PGP Encrypt if needed)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a
+                                        href="https://matrix.to/#/@nlion:nlion.nl"
+                                        rel="noreferrer noopener"
+                                        target="_blank"
+                                        >@nlion:nlion.nl</a
+                                    >
+                                </td>
+                                <td>Matrix</td>
+                            </tr>
+                            <tr>
+                                <td>nlion74</td>
+                                <td>Discord</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="socials" class="section--page section--split">
+                <h2>Socials</h2>
+                <div>
+                    <p>
+                        <span class="link_title">Github</span>
+                        <a href="https://github.com/NLion74" target="_blank"
+                            >https://github.com/NLion74</a
+                        >
+                    </p>
+                    <p>
+                        <span class="link_title">MyAnimeList</span>
+                        <a
+                            href="https://myanimelist.net/profile/nlion"
+                            target="_blank"
+                            >https://myanimelist.net/profile/nlion</a
+                        >
+                    </p>
+                    <p>
+                        <span class="link_title">Letterboxd</span>
+                        <a href="https://letterboxd.com/nlion/" target="_blank"
+                            >https://letterboxd.com/nlion/</a
+                        >
+                    </p>
+                    <p>
+                        <span class="link_title">Storygraph</span>
+                        <a
+                            href="https://app.thestorygraph.com/profile/nlion"
+                            target="_blank"
+                            >https://app.thestorygraph.com/profile/nlion</a
+                        >
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer id="site-footer">
+            <div class="footer-content">
+                <h2>Privacy</h2>
+                <p class="section--text footer-text">
+                    This website uses
+                    <a
+                        href="https://plausible.io/"
+                        rel="noreferrer"
+                        target="_blank"
+                        >Plausible Analytics</a
+                    >, which collects neither personally identifiable
+                    information (PII) nor cookies. Also used is Cloudflare's
+                    proxying, which you can read more about
+                    <a
+                        href="https://www.cloudflare.com/privacypolicy/"
+                        rel="noreferrer"
+                        target="_blank"
+                        >here</a
+                    >.
+                </p>
             </div>
-        </section>
-        <section class="section--page">
-            <h2>Privacy</h2>
-            <p class="section--text">
-                This website uses <a href="https://plausible.io/" rel="noreferrer" target="_blank">Plausible Analytics</a>
-                which collects neither personally identifiable information (PII), nor uses uses cookies. For more info, please visit <a href="https://plausible.io/privacy-focused-web-analytics" rel="noreferrer" target="_blank">this site</a>.
-                Also used is cloudflare's proxying, which you can read more about <a href="https://www.cloudflare.com/privacypolicy/" rel="noreferrer" target="_blank">here</a>.
-            </p>
-        </section>
+        </footer>
+    </body>
 </html>
